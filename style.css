@@ -1,0 +1,84 @@
+*{
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 121, 46, 1) 47%, rgba(0, 212, 255, 1) 100%);
+}
+
+.todoListContainer{
+    width: 90%;
+    max-width: 496px;
+    margin: 100px auto 0; 
+    background-color: #fff;
+    text-align: left;
+    border-radius: 15px; 
+    padding: 18px;
+}
+
+.todoListContainer h1{
+    color: rgb(0, 0, 114);
+}
+.todoListContainer h1 img{
+    width: 28px;
+}
+
+.addToDoListContainer{
+    text-align: left;
+    display: flex;
+    position: relative;
+}
+.addToDoListContainer input{
+    width: 80%;
+    padding: 16px 20px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background-color: rgba(128, 128, 128, 0.116);
+    font-size: 20px;
+}
+
+.addToDoListContainer button{
+    position: absolute;
+    top:0;
+    right: 30px;
+    padding: 16px 40px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.listItemContainer{
+    width: 92%;
+    margin-top: 30px;
+}
+
+.listItem{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.SingleItem{
+    display: flex;
+    
+    justify-content: space-between;
+}
+
+.listItem span {
+    font-size: 24px;
+    color: dimgray;
+}
+.listItem span i{
+    cursor: pointer;
+}
+
+.radioButton{
+    cursor: pointer;
+}

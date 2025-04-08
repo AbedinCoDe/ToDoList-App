@@ -81,4 +81,26 @@ body {
 
 .radioButton{
     cursor: pointer;
+    position: relative;
+    margin-left: 50px;
+}
+
+.lineThrough{
+    text-decoration: line-through;
+}
+
+.radioButton::before{
+    content: '';
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    background-image: url(images/oval.png);
+    left: -40px;
+    top: 0px;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+.radioButton.selected::before{
+    background-image: url(images/check.png);
 }

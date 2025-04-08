@@ -31,7 +31,7 @@ function displayToDoListItem(){
     for(let i = 0; i<myToDoList.length; i++){
         innerHtml += `
         <div class="SingleItem" >
-            <span onclick="markAsComplete(${i})" class="radioButton"> ◯ <span>${myToDoList[i]}</span></span> 
+            <span class="radioButton">${myToDoList[i]}</span>
             <span><i onclick="deleteItem(${i})"  class="fa-solid fa-xmark"></i></span>
         </div>
         `
@@ -40,15 +40,13 @@ function displayToDoListItem(){
 }
 
 
-
-function markAsComplete(id){
-    
-    let indTask = myToDoList.filter(element => element != id)
-    // let getRadioButton = document.
-
-    indTask.querySelector('.radioButton').textContent = '◯';
-    
-}
+document.querySelector('.radioButton').addEventListener('click', function (e) {
+    if (e.target.classList.contains('radioButton')) {
+        e.target.classList.toggle('lineThrough');
+        e.target.classList.toggle('selected');
+        localStorage.setItem('items', JSON.stringify(myToDoList));
+    }
+})
 
 
 
